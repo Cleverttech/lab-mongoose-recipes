@@ -22,7 +22,6 @@ mongoose
  
   .then(() => {
     // Run your code here, after you have insured that the connection was made
-    
     return Recipe.create([{title: "potato Puree", level:"Easy Peasy", ingredients:"Potatoes", cuisine:"German"}])
   })
   .then((NewRecipe)=>{
@@ -41,11 +40,10 @@ mongoose
   })
   .then(()=>{
     console.log("Carrot Cake has been deleted") 
-  })
-  .then(()=>{
     mongoose.connection.close() 
     console.log('disconnected')
   })
+
   .catch(error => {
     console.error('Error connecting to the database', error);
   });
